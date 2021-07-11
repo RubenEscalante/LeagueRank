@@ -1,12 +1,14 @@
 const dotenv = require('dotenv');
 dotenv.config();
 const fs = require('fs');
+const express = require('express');
 const Discord = require('discord.js');
 const config = require("./config.js");
 const {token,prefix}= JSON.parse(JSON.stringify(config))
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
-
+const port = process.env.PORT || 4000;
+const app = express();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
@@ -33,4 +35,8 @@ client.on('message', message => {
 		console.error(error);
 		message.reply('there was an error trying to execute that command!');
 	}
+});
+
+app.listen(port, '0.0.0.0',()=>{
+	console.log("El servidor esta funcionando. No oira ninguna peticion http.");
 });
