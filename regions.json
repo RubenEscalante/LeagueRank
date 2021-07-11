@@ -1,0 +1,32 @@
+[{
+  "lan": {
+    "PlatformRegion": "LA1"
+  },
+  "las": {
+    "PlatformRegion": "LA2"
+  },
+  "br": {
+    "PlatformRegion": "BR1"
+  },
+  "euw": {
+    "PlatformRegion": "EUW1"
+  },
+  "eune": {
+    "PlatformRegion": "EUN1"
+  },
+  "kr": {
+    "PlatformRegion": "KR"
+  },
+  "na": {
+    "PlatformRegion": "NA1"
+  },
+  "oce": {
+    "PlatformRegion": "OC1"
+  },
+  "tr": {
+    "PlatformRegion": "TR1"
+  },
+  "ru": {
+    "PlatformRegion": "RU"
+  }
+}]
