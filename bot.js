@@ -10,7 +10,11 @@ client.commands = new Discord.Collection();
 const port = process.env.PORT || 4000;
 const app = express();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
+var http = require("http");
+setInterval(function() {
+    http.get("http://afternoon-lake-54803.herokuapp.com/");
+	console.log("Ping");
+}, 900000); // every 5 minutes (300000)
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	// set a new item in the Collection
